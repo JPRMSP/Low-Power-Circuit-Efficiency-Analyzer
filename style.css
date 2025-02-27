@@ -1,0 +1,85 @@
+:root {
+    --background-light: #f4f4f4;
+    --text-light: #000;
+    --background-dark: #1e1e1e;
+    --text-dark: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    width: 350px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.dark-mode .container {
+    background: #333;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#darkModeToggle {
+    background: #555;
+}
+
+.dark-mode #darkModeToggle {
+    background: #ccc;
+    color: #000;
+}
+
+#output {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Power Bar Graph */
+.power-bar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bar {
+    height: 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+/* Mobile Responsive */
+@media screen and (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}
